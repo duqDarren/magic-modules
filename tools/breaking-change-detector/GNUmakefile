@@ -5,7 +5,7 @@ ifneq (,$(filter $(PROVIDER_VERSION),"google" "google-beta"))
 else
 	echo "setting up environment for $(PROVIDER_VERSION)"
 endif
-
+iiii
 	sed -i bak -E "s~google/provider/(.*)/([0-9A-Za-z-]*)~google/provider/\1/$(PROVIDER_VERSION)~" comparison.go
 
 ifneq ($(REPLACE_OLD),)
